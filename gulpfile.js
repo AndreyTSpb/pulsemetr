@@ -17,16 +17,13 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task("sass", function(){
-    return gulp.src('src/scss/*.+(sass|scss)')
+    return gulp.src('src/scss/**/*.+(sass|scss)')
             .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(rename({
                 prefix: "",
                 suffix: ".min",
               }))
-            .pipe(autoprefixer({
-                browsers: ['last 2 version'],
-                cascade: false
-            }))
+            .pipe(autoprefixer())
             .pipe(cleanCSS({compatibility: 'ie8'}))
             .pipe(gulp.dest('src/css'))
             .pipe(browserSync.stream());
@@ -34,7 +31,7 @@ gulp.task("sass", function(){
 
 
 gulp.task('watch', function(){
-    gulp.watch("src/scss/*.+(sass|scss)", gulp.parallel("sass"));
+    gulp.watch("src/scss/**/*.+(sass|scss)", gulp.parallel("sass"));
     gulp.watch("src/*.html").on("change", browserSync.reload);
 });
 
