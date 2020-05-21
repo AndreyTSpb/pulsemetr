@@ -1,7 +1,7 @@
 @import 'base/variables';
 
 * {
-    font-family: 'Museo Sans 100 Thin', sans-serif;
+    font-family: 'Museo Sans', sans-serif;
     font-size: 12px;
 }
 
@@ -9,6 +9,17 @@
     max-width: 950px;
     margin: 0 auto; 
 }
+
+.title_block{
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+}
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/button';
+@import 'blocks/advantage';
