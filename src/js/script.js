@@ -20,4 +20,26 @@ $(document).ready(function(){
         }
       ]
     });
-  });
+
+    $('input[type="phone"]').mask("+7(999) 999-9999");
+
+    /**
+     * Валидация форм
+     */
+    function validateForm(form){
+      $(form).validate({
+        rules: {
+          // simple rule, converted to {required:true}
+          name: "required",
+          // compound rule
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        }
+      });
+    }
+
+    validateForm('#consultation form');
+});
