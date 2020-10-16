@@ -29,7 +29,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
-                    <button class="button">заказать звонок</button>
+                    <button data-modal="consultation" class="button">заказать звонок</button>
                 </div>
             </header>
             <div class="promo__wrapper">
@@ -52,8 +52,8 @@
                         на все вопросы
                     </div>
                 </div>
-                <button class="button button__main">заказать кОНСУЛЬТАЦИЮ</button>
-                <div class="promo__link"> или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
+                <button data-modal="consultation" class="button button__main">заказать кОНСУЛЬТАЦИЮ</button>
+                <div class="promo__link"> или <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a></div>
             </div>
             
         </div>
@@ -104,7 +104,7 @@
                 <input type="text" id="first"   name="name" placeholder="Ваше имя">
                 <input type="phone" id="second" name="phone" placeholder="Ваш телефон">
                 <input type="email" id="tree"   name="email" placeholder="Ваш E-mail">
-                <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="button button_submit">заказать консультацию</button>
             </form>
         </div>
     </section>
@@ -118,7 +118,7 @@
         </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
