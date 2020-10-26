@@ -1,4 +1,10 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/font';
+@import 'libs/slick';
+@import 'libs/animate';
+
 @import 'base/variables';
+@import 'base/animations.scss';
 
 * {
     font-family: 'Museo Sans', sans-serif;
@@ -23,4 +29,3 @@
 @import 'blocks/feed';
 @import 'blocks/footer';
 @import 'blocks/modal';
-@import 'base/animations.scss';
